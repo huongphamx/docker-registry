@@ -1,0 +1,18 @@
+version: 0.1
+log:
+  fields:
+    service: registry
+
+storage:
+  s3:
+    region: us-east-1                # R2 only accepts this dummy region
+    bucket: registry
+    accesskey: 5add1768e5a2c7600e200afe9bee5800
+    secretkey: 
+    regionendpoint: https://bee14b395d732d8d05c373480ff0edfd.r2.cloudflarestorage.com
+    secure: true
+
+http:
+  addr: :5000
+  headers:
+    X-Content-Type-Options: [nosniff]

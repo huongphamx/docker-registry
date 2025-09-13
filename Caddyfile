@@ -1,0 +1,10 @@
+registry.huongphamx.dev {
+    encode gzip
+    reverse_proxy localhost:5999
+
+    basicauth {
+        huongphamx $2a$14$yXLAw5XM.JSrrJJeG7uonOkf9gl4snNrNy92xxfvm0bNiCEusgvqa   # bcrypt hash
+    }
+
+    tls huong.px01@gmail.com   # Let’s Encrypt TLS
+}
