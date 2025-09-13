@@ -4,4 +4,6 @@ services:
     ports:
       - 5999:5000
     volumes:
-      - ./config.yml:/etc/docker/registry/config.yml
+      - ./config.yml:/etc/distribution/config.yml
+    environment:
+      - OTEL_TRACES_EXPORTER=none
